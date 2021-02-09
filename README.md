@@ -7,4 +7,4 @@ Iniciando estudo na ferramenta git
 git status
 ```
 
-Objetivo: mostra as alterações feitas no branch atual.  
+Objetivo: mostra as alterações feitas no branch atual.
