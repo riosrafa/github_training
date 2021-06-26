@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="a">
+    <input tpye="text" id="resposta">
+    <input type="button" value="OK" onclick="verificar()">
+
+    <script>
+        function verificar() {
+            let e = 'A';
+            let p = document.getElementById('a').value;
+            for (i = 0; i < p.length; i++) {
+                aux = p[i];
+                switch (e) {
+                    case 'A':
+                        if (aux == '.'){ 
+                            e = 'B';
+                } else if(aux == 'a' || aux == 'b'){   
+                               i = p.length
+                               } else{e == 'A'}
+                        break;    
+                    case 'B':
+                        if (s == '.' && s == 'a' && s == 'b' ){ 
+                            e = 'A'}
+                        break;
+
+                }
+            }
+            if (e == 'B')
+                document.getElementById('resposta').value = "Sucesso";
+            else
+                document.getElementById('resposta').value = "Nao reconhecida";
+        }
+    </script>
+</body>
+</html>
