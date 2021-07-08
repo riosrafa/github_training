@@ -5,21 +5,21 @@ import java.util.Calendar;
 import java.util.List;
 
 import br.com.estudos.entidades.enums.WorkerLevel;
-
+import br.com.estudos.entidades.HoraContratada;
 public class Worker {
 
 	private String name;
 	private WorkerLevel level;
 	private Double baseSalarial;
 	
-	private Departamento_enum departamento;
-	private List<HoraContrada> contratos = new ArrayList<>();
+	private DepartamentoEnum departamento;
+	private List<HoraContratada> contratos = new ArrayList<>();
 	
 	public Worker() {
 		
 	}
 
-	public Worker(String name, WorkerLevel level, Double baseSalarial, Departamento_enum departamento) {
+	public Worker(String name, WorkerLevel level, Double baseSalarial, DepartamentoEnum departamento) {
 
 		this.name = name;
 		this.level = level;
@@ -51,35 +51,32 @@ public class Worker {
 		this.baseSalarial = baseSalarial;
 	}
 
-	public Departamento_enum getDepartamento() {
+	public DepartamentoEnum getDepartamento() {
 		return departamento;
 	}
 
-	public void setDepartamento(Departamento_enum departamento) {
+	public void setDepartamento(DepartamentoEnum departamento) {
 		this.departamento = departamento;
 	}
 
-	public List<HoraContrada> getContratos() {
+	public List<HoraContratada> getContratos() {
 		return contratos;
 	}
 
-	public void setContratos(List<HoraContrada> contratos) {
-		this.contratos = contratos;
-	}
 	
 	// metodo add contratos
-	public void addContract(HoraContrada contrato) {
+	public void addContract(HoraContratada contrato) {
 		contratos.add(contrato);
 	}
 	//metodo remove associacao do contrato com o trabalhador. 
-	public void removeContrato(HoraContrada contrato) {
+	public void removeContrato(HoraContratada contrato) {
 		contratos.remove(contrato);
 	}
-	
+	//valor total do ganho no ano e mes
 	public double income(int ano, int mes) {
 		double sum = baseSalarial;
 		Calendar cal = Calendar.getInstance();
-		for ( HoraContrada c : contratos) {
+		for ( HoraContratada c : contratos) {
 			cal.setTime(c.getDate());
 			int c_ano = cal.get(Calendar.YEAR);
 			int c_mes = cal.get(Calendar.MONTH);

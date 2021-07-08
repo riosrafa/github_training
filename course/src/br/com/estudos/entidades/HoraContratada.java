@@ -2,18 +2,18 @@ package br.com.estudos.entidades;
 
 import java.util.Date;
 
-public class HoraContrada {
+public class HoraContratada {
 
 	private Date date;
 	private Double valorPorHora;
 	private Integer horas;
 
 	// construtor
-	public HoraContrada() {
+	public HoraContratada() {
 
 	}
 
-	public HoraContrada(Date date, Double valorPorHora, Integer horas) {
+	public HoraContratada(Date date, Double valorPorHora, Integer horas) {
 
 		this.date = date;
 		this.valorPorHora = valorPorHora;
@@ -43,7 +43,7 @@ public class HoraContrada {
 	public void setHoras(Integer horas) {
 		this.horas = horas;
 	}
-	
+	//metodo
 	public double totalValue() {
 		return valorPorHora * horas;
 	}

@@ -1,15 +1,15 @@
 package br.com.estudos.entidades;
 
-public class Departamento_enum {
+public class DepartamentoEnum {
 
 	private String name;
 	
 	//construtor
-	public Departamento_enum(String name) {
+	public DepartamentoEnum(String name) {
 		this.name = name;
 	}
 
-	public String getName() {
+ 	public String getName() {
 		return name;
 	}
 
