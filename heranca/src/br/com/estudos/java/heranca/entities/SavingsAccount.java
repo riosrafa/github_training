@@ -24,4 +24,10 @@ public class SavingsAccount extends Account {
 	public void upateBalance() {
 		balance += balance * interestRate;
 	}
+	
+	//quando temos Override em alguma classe, ela indica que estamos sobre posicao de metodo
+	@Override 
+	public void withdraw(double amount) {
+		balance -= amount;
+	}
 }
