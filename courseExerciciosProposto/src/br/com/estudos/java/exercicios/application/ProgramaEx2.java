@@ -32,7 +32,7 @@ public class ProgramaEx2 {
 		ClientEx2 c1 = new ClientEx2("jao", "jao.@gmail.com",sdf.parse("10/10/2010") );
 		System.out.println(c1);
 	
-	
+		
 	
 	
 	sc.close();
